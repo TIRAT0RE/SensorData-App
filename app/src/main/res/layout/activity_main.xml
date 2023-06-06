@@ -1,0 +1,224 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Back"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackG">
+
+    <!-- Верхня панель -->
+
+    <LinearLayout
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="204dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/temperatureTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="Температура:"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/humidityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="Вологість:"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/co2TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="Рівень CO2:"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/coTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="Рівень CO:"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#000000"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/center"
+        android:layout_width="wrap_content"
+        android:layout_height="204dp"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@id/topPanel"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/ipAddressEditText"
+            android:layout_width="225dp"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:fontFamily="@font/michroma"
+            android:hint="IP"
+            android:inputType="text"
+            android:textColor="#FDFDFD"
+            android:textColorHint="#FAF6F6" />
+
+        <EditText
+            android:id="@+id/portEditText"
+            android:layout_width="226dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="5dp"
+            android:ems="10"
+            android:fontFamily="@font/michroma"
+            android:hint="PORT"
+            android:inputType="text"
+            android:textColor="#FDFDFD"
+            android:textColorHint="#FAF6F6" />
+
+        <Button
+            android:id="@+id/Startbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_selector"
+            android:fontFamily="@font/michroma"
+            android:shadowColor="#FFFFFF"
+            android:text="Start"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="251dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="Control Elements (future updates)"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/fanButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@color/BackG"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="o"
+                android:textColor="#F3F0F0"
+                android:textSize="48sp" />
+
+            <Button
+                android:id="@+id/light2Button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/BackG"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="o"
+                android:textColor="#F3F0F0"
+                android:textSize="48sp" />
+
+            <Button
+                android:id="@+id/light1Button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/BackG"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="o"
+                android:textColor="#F3F0F0"
+                android:textSize="48sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/doorButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@color/BackG"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="o"
+                android:textColor="#F3F0F0"
+                android:textSize="48sp" />
+
+            <Button
+                android:id="@+id/homeButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/BackG"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="o"
+                android:textColor="#F3F0F0"
+                android:textSize="48sp" />
+
+            <Button
+                android:id="@+id/settingsButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/BackG"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="o"
+                android:textColor="#F3F0F0"
+                android:textSize="48sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Центральна область -->
+
+</RelativeLayout>
